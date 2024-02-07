@@ -7,6 +7,17 @@
 {% block content %}
     <div class="container">
     </br>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" class="form-control" name="task" placeholder="New Task?">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+
+    </br>
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>

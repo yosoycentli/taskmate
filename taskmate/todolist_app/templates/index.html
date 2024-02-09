@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 <title>Welcome to Taskmate!</title>
@@ -6,6 +7,21 @@
 
 {% block content %}
     <div class="container">
-        <h1>{{ index_text }}</h1>
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/sticky_notes.jpg' %}" alt="Notes" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/sticky_notes.jpg' %}" alt="Notes" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/sticky_notes.jpg' %}" alt="Notes" width="360" height="250">
+            </div>
+        </div>
+        <div class= "row mt-5">
+            <p>Quick And Easy To Use, Anytime, Anywhere!</p>
+            <p>"Plan your Day Better, Get Your Life Organized</p>
+            <p>TASKMATE Let's You Keep Track Your Task In One Place</p>
+        </div>
     </div>
 {% endblock content %}

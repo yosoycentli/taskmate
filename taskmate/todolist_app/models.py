@@ -7,5 +7,8 @@ class TaskList(models.Model):
     task = models.CharField(max_length=300)
     done = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['id']
+
     def __str__(self):
         return self.task + " - " + str(self.done)
